@@ -1,8 +1,8 @@
 provider "aws" {
   region     = "ap-south-1"
-  # Keys are passed via variables for security
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
-
 # 1. THE STORAGE (The Origin)
 resource "aws_s3_bucket" "website_bucket" {
   bucket = "hari-global-project-2026" # This name must be unique!
